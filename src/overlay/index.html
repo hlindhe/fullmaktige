@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fullmäktige-Live Overlay</title>
+  <link rel="stylesheet" href="/overlay/overlay.css" />
+</head>
+<body>
+  <div id="safe-area">
+    <section id="agenda-card" class="agenda-card hidden">
+      <div class="kicker">Aktuellt ärende</div>
+      <div class="agenda-line"><span id="agenda-paragraph"></span><span id="agenda-title"></span></div>
+    </section>
+
+    <section id="nameplate" class="nameplate hidden">
+      <div class="party-bar" id="party-bar"></div>
+      <div class="nameplate-content">
+        <div id="member-name" class="member-name"></div>
+        <div class="member-meta"><span id="member-party"></span><span id="member-role"></span></div>
+      </div>
+    </section>
+  </div>
+
+  <section id="vote-result" class="vote-result hidden">
+    <div class="vote-panel">
+      <p class="kicker">Voteringsresultat</p>
+      <h1 id="vote-heading">Beslutspunkt</h1>
+      <div class="vote-bars">
+        <div class="vote-row yes"><span>Ja</span><b id="vote-yes">0</b><div><i id="bar-yes"></i></div></div>
+        <div class="vote-row no"><span>Nej</span><b id="vote-no">0</b><div><i id="bar-no"></i></div></div>
+        <div class="vote-row abstain"><span>Avstår</span><b id="vote-abstain">0</b><div><i id="bar-abstain"></i></div></div>
+      </div>
+      <div id="party-breakdown" class="party-breakdown"></div>
+    </div>
+  </section>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/overlay/overlay.js"></script>
+</body>
+</html>

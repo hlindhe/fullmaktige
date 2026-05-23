@@ -1,0 +1,31 @@
+{
+  "name": "fullmaktige-live",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Webbaserat grafiksystem för livesändningar av kommunfullmäktige.",
+  "scripts": {
+    "dev": "concurrently \"npm:server\" \"npm:client\"",
+    "server": "node src/server/index.js",
+    "client": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "test": "node tests/state.test.js"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "5.0.4",
+    "vite": "7.2.4",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "express": "5.1.0",
+    "socket.io": "4.8.1",
+    "socket.io-client": "4.8.1",
+    "pg": "8.16.3",
+    "cors": "2.8.5",
+    "dotenv": "17.2.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "10.4.22",
+    "concurrently": "9.2.1",
+    "postcss": "8.5.6",
+    "tailwindcss": "3.4.18"
+  }
+}
