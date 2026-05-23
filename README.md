@@ -12,7 +12,7 @@ Prototyp för ett webbaserat grafiksystem till livesändningar av kommunfullmäk
 
 ## Körning
 
-Den här WSL-miljön saknar `npm`, men projektet är förberett för en vanlig Node 20+-miljö:
+Projektet kräver Node 20.19+ för Vite 7 och Express 5. Om systemets Node är äldre installerar `npm install` även en lokal Node 20-binär som npm-scripts använder automatiskt via `node_modules/.bin`.
 
 ```bash
 npm install

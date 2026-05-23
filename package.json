@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "description": "Webbaserat grafiksystem för livesändningar av kommunfullmäktige.",
+  "engines": {
+    "node": ">=20.19.0",
+    "npm": ">=10.0.0"
+  },
   "scripts": {
     "dev": "concurrently \"npm:server\" \"npm:client\"",
     "server": "node src/server/index.js",
@@ -11,8 +15,8 @@
     "test": "node tests/state.test.js"
   },
   "dependencies": {
-    "@vitejs/plugin-react": "5.0.4",
-    "vite": "7.2.4",
+    "@vitejs/plugin-react": "5.1.1",
+    "vite": "7.3.2",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "express": "5.1.0",
@@ -25,7 +29,8 @@
   "devDependencies": {
     "autoprefixer": "10.4.22",
     "concurrently": "9.2.1",
-    "postcss": "8.5.6",
+    "node": "20.19.5",
+    "postcss": "8.5.15",
     "tailwindcss": "3.4.18"
   }
 }
